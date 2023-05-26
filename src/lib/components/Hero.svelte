@@ -5,16 +5,11 @@
 	import { slide } from 'svelte/transition';
 	import { sineOut } from 'svelte/easing';
 	import { onMount } from 'svelte';
+	import { tweened, type Tweened } from 'svelte/motion';
+	import { browser } from '$app/environment';
 
-	// function fillEffect(node: Node) {
-	// 	anime({
-	// 		targets: node,
-	// 		backgroundPosition: [0, '100%'],
-	// 		duration: 1000,
-	// 		easing: 'linear'
-	// 	});
-	// }
 	let active = false;
+	export let initSection: HTMLElement;
 
 	onMount(() => {
 		anime({
@@ -83,6 +78,11 @@
 					}}
 					on:pointerleave={() => {
 						active = false;
+					}}
+					on:pointerup={() => {
+						initSection.scrollIntoView({
+							behavior: 'smooth'
+						});
 					}}
 					class="w-full h-full active:appearance-none py-8 px-4 border-2 rounded-lg border-black text-3xl font-bold z-10"
 				>

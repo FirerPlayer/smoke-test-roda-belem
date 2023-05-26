@@ -83,8 +83,8 @@
 		style="box-shad6ow: inset 0 0 15px 2px rgba(0, 0, 0, 0.5);"
 		class="w-full md:w-[500px] h-[350px] md:h-[500px] active:cursor-grabbing cursor-grab"
 	/>
-	<div class="flex items-center p-2 rounded-lg w-fit">
-		<MapPin size="100%" class="text-black w-10" />
+	<div class="flex items-center p-2 rounded-lg w-fit text-black">
+		<MapPin size="100%" class="w-10" />
 		Belém, Pará
 	</div>
 </div>

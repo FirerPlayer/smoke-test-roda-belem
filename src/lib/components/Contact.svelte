@@ -6,9 +6,9 @@
 	import { Notyf } from 'notyf';
 	import 'notyf/notyf.min.css';
 	import { onMount } from 'svelte';
-	import type { PageServerData } from '../../routes/$types';
+	import type { LayoutServerData } from '../../routes/$types';
 
-	export let data: PageServerData;
+	export let data: LayoutServerData;
 
 	let notyf: Notyf;
 	let form: HTMLFormElement;
@@ -24,6 +24,9 @@
 			form.reset();
 			[...form.children].forEach((child) => {
 				child.classList.remove(activeClass);
+				if (child.tagName == 'BUTTON') {
+					child.classList.add(activeClass);
+				}
 			});
 		} else {
 			const wrongInput = [...form.elements].find((element) => {
@@ -57,7 +60,7 @@
 </script>
 
 <div class=" w-full h-fit flex flex-col items-center">
-	<h1 class="text-4xl mt-16 mb-10">Fale com a gente !</h1>
+	<h1 class="text-4xl mt-16 mb-10 text-center">Fale com a gente ! <br /> Seja um beta tester</h1>
 	<div class="w-full h-fit flex flex-wrap justify-around gap-y-8 md:gap-y-0 px-5">
 		<form bind:this={form} class="flex flex-col w-96 self-start my-auto">
 			<label class={labelClass} for="name">Nome</label>

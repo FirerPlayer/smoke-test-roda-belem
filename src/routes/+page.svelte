@@ -6,17 +6,19 @@
 	import Explore from '$lib/components/features/Explore.svelte';
 	import GetInformed from '$lib/components/features/GetInformed.svelte';
 	import Share from '$lib/components/features/Share.svelte';
-	import type { PageServerData } from './$types';
+	import type { LayoutServerData } from './$types';
 
-	export let data: PageServerData;
+	export let data: LayoutServerData;
+	let initSection: HTMLElement;
+	let contactRef: HTMLElement;
 </script>
 
-<Hero />
+<Hero {initSection} />
 <div class="bg-brand-500 text-white">
-	<Explore />
+	<section bind:this={initSection} title="Explorar"><Explore /></section>
 	<GetInformed />
 	<Share />
 	<Contribute />
-	<GetApp />
-	<Contact {data} />
+	<GetApp {contactRef} />
+	<section bind:this={contactRef}><Contact {data} /></section>
 </div>
