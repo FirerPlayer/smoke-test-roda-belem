@@ -25,7 +25,7 @@
 <div class="min-h-[600px] w-full flex flex-row-reverse flex-wrap justify-around items-center p-8">
 	<img bind:this={feature} src={f4} alt="Recurso contribuir" width="600px" height="600px" />
 	<div class="flex flex-col items-start max-w-lg">
-		<h1 class="text-6xl text-gray-800 font-bold mb-10">Compartilhe experiências</h1>
+		<h1 class="text-6xl text-gray-800 font-bold mb-10">Contribua</h1>
 		<p class="text-lg text-justify font-semibold">
 			O Roda Belém é mais do que um simples aplicativo. Ele é uma ferramenta que promove a
 			acessibilidade e inclusão para cadeirantes e pessoas com dificuldade de locomoção na nossa

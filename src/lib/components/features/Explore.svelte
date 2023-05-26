@@ -27,7 +27,7 @@
 		<h1 class="text-6xl text-gray-800 font-bold mb-10">Explore</h1>
 		<p class="text-lg text-justify font-semibold">
 			Explore a cidade e encontre os melhores locais para <span>você</span>. Abra o mapa e veja
-			todos os locais proximo a você, como restaurantes, lojas, shoppings, praças, parques, etc...
+			todos os locais proximos a você, como restaurantes, lojas, shoppings, praças, parques, etc...
 			Com o Roda Belém, você consegue descobrir locais de forma inclusiva e fácil.
 		</p>
 	</div>
